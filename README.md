@@ -19,7 +19,7 @@ This project is a modern, interactive Employee Registration form designed to cap
 ## Technologies Used
 * HTML5
 * CSS3
-* JavaScript (Vanilla JS or React for state management)
+* JavaScript (Angular for state management)
 
 ## Getting Started
 
