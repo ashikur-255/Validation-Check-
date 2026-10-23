@@ -1,0 +1,236 @@
+/* Background */
+body {
+    margin: 0;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #667eea 0%,
+        #764ba2 100%
+    );
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 5px 15px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+.card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d3748;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+/* Inputs & Selects */
+input,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* Invalid Fields */
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border-color: #e53e3e;
+}
+
+/* Error Messages */
+.error small,
+small {
+    display: block;
+    margin-top: 5px;
+    color: #e53e3e;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Skill Section */
+.skill-row {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    margin-bottom: 12px;
+}
+
+.skill-row input {
+    flex: 1;
+}
+
+/* Add Button */
+.btn-add {
+    background: #38a169;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: #2f855a;
+    transform: translateY(-2px);
+}
+
+/* Remove Button */
+.btn-remove {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-remove:hover {
+    background: #c53030;
+    transform: translateY(-2px);
+}
+
+.btn-remove:disabled {
+    background: #a0aec0;
+    cursor: not-allowed;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    transform: scale(1.2);
+}
+
+.checkbox-group label {
+    margin: 0;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-submit:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-submit:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+}
+
+/* Preview Box */
+pre {
+    background: #1a202c;
+    color: #68d391;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-size: 13px;
+}
+
+/* Horizontal Line */
+hr {
+    border: none;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 30px 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .skill-row {
+        flex-direction: column;
+    }
+
+    .btn-remove {
+        width: 100%;
+    }
+}
